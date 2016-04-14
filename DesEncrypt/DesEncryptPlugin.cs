@@ -24,7 +24,7 @@ namespace DesEncrypt
         {
             get
             {
-                return "Encrypt string and vvalues using Triple DES";
+                return "Encrypt string and values using Triple DES";
             }
         }
         public override void OnInit(IBabelServiceProvider services, IBabelLogger logger)
