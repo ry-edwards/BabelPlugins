@@ -13,11 +13,14 @@ namespace DesEncrypt
 {
     public class DesStringEncrypter : IBabelStringEncryptionService, IDisposable
     {
-        MethodDef _decryptString;
-        FieldDef _encryptedData;
-        TripleDESCryptoServiceProvider _algo;
-        List<string> _strings;
+        #region Fields
+        private MethodDef _decryptString;
+        private FieldDef _encryptedData;
+        private TripleDESCryptoServiceProvider _algo;
+        private List<string> _strings;
+        #endregion
 
+        #region Constructors
         public DesStringEncrypter(string password)
         {
             if (password == null)
@@ -30,6 +33,9 @@ namespace DesEncrypt
             _algo.Padding = PaddingMode.PKCS7;
         }
 
+        #endregion
+
+        #region Methods
         public void Dispose()
         {
             _algo.Dispose();
@@ -126,5 +132,6 @@ namespace DesEncrypt
 
             return dest.ToArray();
         }
+        #endregion
     }
 }

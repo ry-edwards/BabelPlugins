@@ -27,3 +27,22 @@ by replacing the call to GetManifestResourceStream with a call to decompression 
 ```
 babel.exe app.exe --plugin ResPacker.dll 
 ```
+
+### UnreadableNames Plugin
+The UnreadableNames plugin show hot to implement a simple renaming service.
+The service generates unique names varing randomly the characted case of a fixed-lenght name.
+
+**Usage:**
+```
+babel.exe app.exe --plugin UnreadableNames.dll [--argument namelength=value] [--argument prefixlength=value] [--argument alphabet=string]
+```
+
+The resulting names, are quite difficult to interpret because thya are all similar to each other.
+Example:
+
+```
+EwScreykfgcxxtQaMd
+EwScreykfgcxxTQaMd
+EwScreykfgCxxtqaMd
+EwScreykFgCXxtQaMd
+```

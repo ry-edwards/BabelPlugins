@@ -12,7 +12,7 @@ namespace ResPacker
 {
     public class ResPackerPlugin : BabelPluginBase
     {
-        MethodDef _unpackStream;
+        private MethodDef _unpackStream;
 
         public override string Description
         {

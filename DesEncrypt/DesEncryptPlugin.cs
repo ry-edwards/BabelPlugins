@@ -9,16 +9,12 @@ namespace DesEncrypt
 {
     public class DesEncryptPlugin : BabelPluginBase
     {
+        #region Properties
         public DesStringEncrypter StringEncrypter { get; set; }
 
         public DesValueEncrypter ValueEncrypter { get; set; }
-        
-        public string Password { get; set; }
 
-        public DesEncryptPlugin()
-            : base("DES crypter")
-        {
-        }
+        public string Password { get; set; }
 
         public override string Description
         {
@@ -26,7 +22,18 @@ namespace DesEncrypt
             {
                 return "Encrypt string and values using Triple DES";
             }
+        } 
+        #endregion
+
+        #region Constructors
+        public DesEncryptPlugin()
+            : base("DES crypter")
+        {
         }
+
+        #endregion
+
+        #region Methods
         public override void OnInit(IBabelServiceProvider services, IBabelLogger logger)
         {
             var config = services.GetService<IBabelConfigurationService>();
@@ -105,6 +112,7 @@ namespace DesEncrypt
             builder.AppendLine();
 
             Logger.Write(builder.ToString());
-        }
+        } 
+        #endregion
     }
 }

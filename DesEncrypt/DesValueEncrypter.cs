@@ -13,19 +13,16 @@ namespace DesEncrypt
 {
     public class DesValueEncrypter : IBabelValueEncryptionService, IDisposable
     {
-        MethodDef _decryptArray;
-        MethodDef _decryptInt32;
-        FieldDef _encryptedData;
+        #region Fields
+        private MethodDef _decryptArray;
+        private MethodDef _decryptInt32;
+        private FieldDef _encryptedData;
 
-        TripleDESCryptoServiceProvider _algo;
-        List<int> _values;
+        private TripleDESCryptoServiceProvider _algo;
+        private List<int> _values;
+        #endregion
 
-        public void Dispose()
-        {
-            if (_algo != null)
-                _algo.Dispose();
-        }
-
+        #region Properties
         public MethodDef DecryptArrayMethod
         {
             get
@@ -40,7 +37,8 @@ namespace DesEncrypt
             {
                 return _decryptInt32;
             }
-        }
+        } 
+        #endregion
 
         #region Not Implemented
         public MethodDef DecryptDoubleMethod
@@ -83,16 +81,26 @@ namespace DesEncrypt
         }
         #endregion
 
+        #region Constructors
         public DesValueEncrypter(string password)
         {
             if (password == null)
                 throw new ArgumentNullException("password");
 
             _values = new List<int>();
-            _algo = new TripleDESCryptoServiceProvider();            
+            _algo = new TripleDESCryptoServiceProvider();
             _algo.Key = Encoding.UTF8.GetBytes(password);
             _algo.Mode = CipherMode.ECB;
             _algo.Padding = PaddingMode.PKCS7;
+        }
+
+        #endregion
+
+        #region Methods
+        public void Dispose()
+        {
+            if (_algo != null)
+                _algo.Dispose();
         }
 
         public void OnBeginMethod(MethodDef method)
@@ -168,6 +176,7 @@ namespace DesEncrypt
             }
 
             _encryptedData.SetInitalValue(stream.ToArray());
-        }
+        } 
+        #endregion
     }
 }
