@@ -29,7 +29,7 @@ babel.exe app.exe --plugin ResPacker.dll
 ```
 
 ### UnreadableNames Plugin
-The UnreadableNames plugin show hot to implement a simple renaming service.
+The UnreadableNames plugin show how to implement a simple renaming service.
 The service generates unique names varing randomly the characted case of a fixed-lenght name.
 
 **Usage:**
@@ -37,7 +37,7 @@ The service generates unique names varing randomly the characted case of a fixed
 babel.exe app.exe --plugin UnreadableNames.dll [--argument namelength=value] [--argument prefixlength=value] [--argument alphabet=string]
 ```
 
-The resulting names, are quite difficult to interpret because thya are all similar to each other.
+The resulting names, are quite difficult to interpret because they are all similar to each other.
 Example:
 
 ```
