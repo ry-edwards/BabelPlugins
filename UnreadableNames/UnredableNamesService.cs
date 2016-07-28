@@ -7,7 +7,7 @@ using Babel.Xml;
 
 namespace UnreadableNames
 {
-    internal class UnredableNamesService : IBabelRenamingService, IBabelRenamingListner
+    internal class UnredableNamesService : IBabelRenamingService, IBabelRenamingListener
     {
         #region Fields
         private int _nameLength;

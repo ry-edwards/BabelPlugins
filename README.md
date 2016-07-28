@@ -46,3 +46,7 @@ EwScreykfgcxxTQaMd
 EwScreykfgCxxtqaMd
 EwScreykFgCXxtQaMd
 ```
+
+### AntiDebug Plugin
+This plugin adds anti-debugging code that preriodically checks if the process is running in a debugger.
+In case a debugger is detected, the process is terminated.
