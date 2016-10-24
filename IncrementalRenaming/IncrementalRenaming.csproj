@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1F19F2F9-A4B4-4636-A7E7-9BD04C355C56}</ProjectGuid>
+    <ProjectGuid>{D2D0648F-FDDD-4954-BCAC-453EE7168B22}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AntiDebug</RootNamespace>
-    <AssemblyName>AntiDebug</AssemblyName>
+    <RootNamespace>IncrementalRenaming</RootNamespace>
+    <AssemblyName>IncrementalRenaming</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,7 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="babel, Version=8.5.0.1, Culture=neutral, PublicKeyToken=138d17b5bd621ab7, processorArchitecture=MSIL">
+    <Reference Include="babel, Version=8.7.0.0, Culture=neutral, PublicKeyToken=138d17b5bd621ab7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Program Files\Babel\babel.exe</HintPath>
     </Reference>
@@ -45,10 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AntiDebugPlugin.cs" />
-    <EmbeddedResource Include="Code\AntiDebug.cs" />
+    <Compile Include="IncrementalRenamingListner.cs" />
+    <Compile Include="IncrementalRenamingPlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
