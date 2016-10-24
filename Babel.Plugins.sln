@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesEncrypt", "DesEncrypt\DesEncrypt.csproj", "{DA289245-499D-4ACD-A603-7F2289DA2A34}"
 EndProject
@@ -16,8 +16,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnreadableNames", "UnreadableNames\UnreadableNames.csproj", "{08F6C590-774B-4141-8457-6BA33FDC45BB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntiDebug", "AntiDebug\AntiDebug.csproj", "{1F19F2F9-A4B4-4636-A7E7-9BD04C355C56}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncrementalRenaming", "IncrementalRenaming\IncrementalRenaming.csproj", "{D2D0648F-FDDD-4954-BCAC-453EE7168B22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +39,6 @@ Global
 		{1F19F2F9-A4B4-4636-A7E7-9BD04C355C56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F19F2F9-A4B4-4636-A7E7-9BD04C355C56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F19F2F9-A4B4-4636-A7E7-9BD04C355C56}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D2D0648F-FDDD-4954-BCAC-453EE7168B22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D2D0648F-FDDD-4954-BCAC-453EE7168B22}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D2D0648F-FDDD-4954-BCAC-453EE7168B22}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D2D0648F-FDDD-4954-BCAC-453EE7168B22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

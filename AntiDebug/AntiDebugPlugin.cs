@@ -29,11 +29,6 @@ namespace AntiDebug
             MergeAntiDebug(assembly);
         }
 
-        public override void OnEnd(AssemblyDef assembly)
-        {
-            Logger.Write("Anti debug code added");    
-        }
-
         private void MergeAntiDebug(AssemblyDef target)
         {
             string code = Resources.AntiDebugNetCode();

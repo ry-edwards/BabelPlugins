@@ -50,20 +50,3 @@ EwScreykFgCXxtQaMd
 ### AntiDebug Plugin
 This plugin adds anti-debugging code that preriodically checks if the process is running in a debugger.
 In case a debugger is detected, the process is terminated.
-
-**Usage:**
-```
-babel.exe app.exe --plugin AntiDebug.dll
-```
-
-### IncrementalRenaming Plugin
-
-The Incremental renaming plugin allows you to maintain a naming scheme for a given assembly using the 
-generated mapping file for that assembly. 
-Incremental renaming is desiderable when you have a set of dependent assemblies which have their public interface 
-obfuscated and you want to redistribute one of these these assemblies because it has been modified.
-
-**Usage:**
-```
-babel.exe app.exe --plugin IncrementalRenaming.dll --argument mapfile=filepath
-```
