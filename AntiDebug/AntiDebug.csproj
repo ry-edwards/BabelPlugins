@@ -30,7 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="babel, Version=8.5.0.1, Culture=neutral, PublicKeyToken=138d17b5bd621ab7, processorArchitecture=MSIL">
+    <Reference Include="babel">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Program Files\Babel\babel.exe</HintPath>
     </Reference>
