@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntiDebug", "AntiDebug\Anti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncrementalRenaming", "IncrementalRenaming\IncrementalRenaming.csproj", "{D2D0648F-FDDD-4954-BCAC-453EE7168B22}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LicenseInjector", "LicenseInjector\LicenseInjector.csproj", "{10A8B30C-5DDA-4196-BB4D-8E6212AB10DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{D2D0648F-FDDD-4954-BCAC-453EE7168B22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2D0648F-FDDD-4954-BCAC-453EE7168B22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2D0648F-FDDD-4954-BCAC-453EE7168B22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10A8B30C-5DDA-4196-BB4D-8E6212AB10DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10A8B30C-5DDA-4196-BB4D-8E6212AB10DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10A8B30C-5DDA-4196-BB4D-8E6212AB10DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10A8B30C-5DDA-4196-BB4D-8E6212AB10DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

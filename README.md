@@ -67,3 +67,20 @@ obfuscated and you want to redistribute one of these these assemblies because it
 ```
 babel.exe app.exe --plugin IncrementalRenaming.dll --argument mapfile=filepath
 ```
+
+### LicenseInjector Plugin
+
+This simple plugin will allow you to add Babel Licensing license validation check on an existing WinForm application.
+The plugin uses a message box to show an error when the license validation not passes.
+
+You can add your own message box and customize the validation logic by changing the LicenseFileCheckWinForm.cs class.
+
+Note: This plugin needs the Babel.Licensing.dll assembly to work. 
+The DEMO version of Babel Licensing will not allow you to remove the dependency from Babel.Licensing.dll and all the 
+license generated will be trial licenses.
+With the retail version you can merge Babel.Licensing.dll into the main application and generate fully functional licenses.
+
+**Usage:**
+```
+babel.exe app.exe --plugin LicenseInjector.dll
+```
