@@ -17,10 +17,11 @@ namespace LicenseInjector
 
         public override void OnBegin(AssemblyDef assembly)
         {
-            MergeBabelLicensing(assembly);
+            Logger.Write("Adding license check");
+            MergeLicensingCode(assembly);
         }
 
-        private void MergeBabelLicensing(AssemblyDef target)
+        private void MergeLicensingCode(AssemblyDef target)
         {
             // Merge decryption code
             string code = Resources.LicenseFileCheckWinFormCode();
@@ -36,7 +37,7 @@ namespace LicenseInjector
             var method = target.Find<MethodDef>(".*::ValidateLicense.*", true);
 
             // Call license validation at module initializer
-            target.CallAtModuleInitializer(method);
+            target.CallAtModuleInitializer(method);            
         }
     }
 }
