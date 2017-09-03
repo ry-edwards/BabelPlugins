@@ -15,10 +15,12 @@ namespace LicenseInjector
         {
         }
 
-        public override void OnBegin(AssemblyDef assembly)
+        public override void OnBeginPhase(AssemblyDef assembly, BabelPhase phase)
         {
-            Logger.Write("Adding license check");
-            MergeLicensingCode(assembly);
+            if (phase.IsMerge) {
+                Logger.Write("Adding license check");
+                MergeLicensingCode(assembly);
+            }
         }
 
         private void MergeLicensingCode(AssemblyDef target)
@@ -37,7 +39,7 @@ namespace LicenseInjector
             var method = target.Find<MethodDef>(".*::ValidateLicense.*", true);
 
             // Call license validation at module initializer
-            target.CallAtModuleInitializer(method);            
+            target.CallAtModuleInitializer(method);
         }
     }
 }
