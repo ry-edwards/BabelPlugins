@@ -49,6 +49,14 @@ namespace DesEncrypt
             }
         }
 
+        public int Iterations
+        {
+            get
+            {
+                return 1;
+            }
+        }
+
         public string Encrypt(string source)
         {
             _strings.Add(source);
@@ -131,6 +139,11 @@ namespace DesEncrypt
             }
 
             return dest.ToArray();
+        }
+
+        StringDecryptionInfo IBabelStringEncryptionService.Encrypt(string source)
+        {
+            throw new NotImplementedException();
         }
         #endregion
     }
